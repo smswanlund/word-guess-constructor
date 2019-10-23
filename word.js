@@ -5,15 +5,15 @@ var Letter = require("./letter.js");
 // word constructor
 var Word = function(word) {
 
-    this.answer = word,
-    this.test = [],
+    this.word = word,
+    this.testWord = [],
 
     this.makeWord = function () {
 
-        for(var i=0; i<answer.length; i++) {
+        for(var i=0; i<word.length; i++) {
 
-            var letter = new Letter(answer[i]);
-            this.test.push(letter);
+            var letter = new Letter(word[i]);
+            this.testWord.push(letter);
 
         }
     },
@@ -22,8 +22,8 @@ var Word = function(word) {
 
         var display = [];
 
-        for (var i=0; i<this.test.length; i++) {
-            display.push(this.test[i].letterReturn());
+        for (var i=0; i<this.testWord.length; i++) {
+            display.push(this.testWord[i].letterReturn());
         }
         return display.join(" ");
 

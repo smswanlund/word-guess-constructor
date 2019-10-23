@@ -6,10 +6,10 @@ var Letter = function(letter) {
 
     this.letterReturn = function() {
 
-        if(alreadyGuessed === true) {
+        if (this.alreadyGuessed === true) {
             return val;
         }
-        else if (alreadyGuessed === false){
+        else if (this.alreadyGuessed === false){
             return "_";
         }
         
